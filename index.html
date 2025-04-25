@@ -6,10 +6,74 @@
     <title>Codex Studios</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <style>
+        /* Animações otimizadas */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            will-change: transform, opacity;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            will-change: transform, opacity;
+        }
+
+        .slide-in-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            will-change: transform, opacity;
+        }
+
+        .slide-in-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            will-change: transform, opacity;
+        }
+
+        .scale-in.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Delays reduzidos */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+
+        /* Otimização de performance */
+        .main-header, .main-content, .languages-section, .sobre, .footer {
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            perspective: 1000;
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
-        <nav class="nav-bar">
+        <nav class="nav-bar fade-in delay-1">
             <a href="#" class="logo"><img src="logo.png" alt="Logo" style="width: 10%; height: 10%; margin-right: 2%; vertical-align: -80%;">Codex Studios</a>
             <button class="hamburger menu-btn" data-check="false">
                 <svg viewBox="0 0 32 32">
@@ -38,15 +102,15 @@
         <div class="coordinates">-19.912998 S, -43.940933 E</div>
 
         <div class="main-content">
-            <div class="floating-card">
+            <div class="floating-card slide-in-left delay-2">
                 <p>A Codex Studios é uma empresa que oferece soluções tecnológicas diversificadas para auxiliar empresas e organizações em suas necessidades de desenvolvimento de software e otimização de processos digitais.</p>
             </div>
-            <div class="text-content">
+            <div class="text-content slide-in-right delay-2">
                 <h1 class="title">Coded to Perfection</h1>
                 <a href="https://wa.me/5531985160321" class="cta-buttonn">Entre em Contato <> </a>
             </div>
 
-            <div class="image-container">
+            <div class="image-container scale-in delay-3">
                 <div class="review-card card1 active">
                     <div class="fiverr-rating">
                         <span>Google.</span>
@@ -70,9 +134,9 @@
         </div>
         <section class="languages-section">
             <div class="container">
-                <h1 class="section-titlee">Conheça as Tecnologias</h1>
-                <p class="section-p">Essas são as Principais Tecnologias que Utilizamos nos Nossos Projetos</p>
-                <div class="language-slider">
+                <h1 class="section-titlee fade-in delay-3">Conheça as Tecnologias</h1>
+                <p class="section-p fade-in delay-3">Essas são as Principais Tecnologias que Utilizamos nos Nossos Projetos</p>
+                <div class="language-slider scale-in delay-4">
                     <div class="slider-container">
                         <!-- First Group -->
                         <div class="slide-group active">
@@ -132,7 +196,7 @@
 
     <section class="sobre">
         <div class="sobre-container">
-            <div class="sobre-text">
+            <div class="sobre-text slide-in-left delay-4">
                 <h1>Experimente o Poder do Desenvolvimento Digital com a <span class="highlight">CODEX STUDIOS</span></h1>
                 <p class="text-p">Uma agência criativa é uma empresa que fornece uma variedade de serviços para ajudar empresas e organizações com suas necessidades criativas e de desenvolvimento. Nossa Agência empregam uma equipe de especialistas em vários campos criativos, como Design, Desenvolvimento Web, Marketing em Geral e Branding.</p>
                 <a href="Quem-somos.html" class="body-button">Saiba Mais <> </a>
@@ -145,7 +209,7 @@
 
     <section class="sobre">
         <div class="sobre-container">
-            <div class="servicos-text">
+            <div class="servicos-text slide-in-right delay-4">
                 <h1 class="sobree">Descubra o Potencial dos Nossos <span class="highlight">Serviços Digitais</span></h1>
                 <p class="text-pp">Nossa Agência oferece uma ampla gama de serviços especializados para transformar ideias em soluções digitais completas. Contamos com uma equipe experiente nas áreas de Desenvolvimento de Aplicativos Mobile, Desenvolvimento Web, Front-End e Back-End, além de estratégias de Análise de Mercado e SEO para garantir resultados sólidos e duradouros.</p>
 <!-- Carousel wrapper -->
@@ -312,5 +376,46 @@
     <a href="https://wa.me/5531985160321" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <img src="images/whatsapp-icon.svg" alt="WhatsApp">
     </a>
+
+    <script>
+        // Otimização do scroll com throttle
+        let ticking = false;
+        
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+
+        function handleScroll() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+                    elements.forEach(element => {
+                        if (isElementInViewport(element)) {
+                            element.classList.add('active');
+                        }
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        // Otimização do carregamento inicial
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+            elements.forEach(element => {
+                if (isElementInViewport(element)) {
+                    element.classList.add('active');
+                }
+            });
+        });
+
+        // Otimização do evento de scroll
+        window.addEventListener('scroll', handleScroll, { passive: true });
+    </script>
 </body>
 </html>
