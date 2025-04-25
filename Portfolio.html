@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Codex Studios</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="secondary-header portfolio-header">
+        <nav class="nav-barr">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Logo" style="width: 10%; height: 10%; margin-right: 2%; vertical-align: -80%;">Codex Studios</a>
+            <button class="hamburger menu-btn" data-check="false">
+                <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <div class="toggle-menu">
+            <button class="close-menu">×</button>
+            <div class="menu-bg">
+                <div class="site-header__bg"></div>
+            </div>
+            <div class="toggle-link">
+                <ul class="links list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Quem-somos.html">Quem Somos</a></li>
+                    <li><a href="Servicos.html">Serviços</a></li>
+                    <li><a href="Portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="https://wa.me/5531985160321">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="secondary-header-content">
+            <h1 class="header-quem-somos">PORTFÓLIO</h1>
+            <div class="breadcrumb">
+                <a href="index.html">HOME</a>
+                <span class="separator">•</span>
+                <span class="current">PORTFÓLIO</span>
+            </div>
+        </div>
+    </header>
+    <div class="cursor-bubble"></div>
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Principais Projetos</h2>
+                <p>Conheça Nossos Projetos mais Recentes</p>
+            </div>
+            
+            <!-- Filters -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="systems">Sistemas</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Projeto 1 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://i.postimg.cc/Wp78Bv0y/image.png" alt="Site Institucional">
+                        <div class="portfolio-overlay">
+                            <h3>MAMUTE TEAM</h3>
+                            <p>Academia de Artes Marciais.</p>
+                            <a href="https://mamuteacademy.com/" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="App de Delivery">
+                        <div class="portfolio-overlay">
+                            <h3>App de Delivery</h3>
+                            <p>Aplicativo mobile para delivery de alimentos</p>
+                            <a href="#" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="portfolio-item" data-category="systems">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="ERP System">
+                        <div class="portfolio-overlay">
+                            <h3>ERP System</h3>
+                            <p>Sistema de gestão empresarial integrado</p>
+                            <a href="#" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 4 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="E-commerce">
+                        <div class="portfolio-overlay">
+                            <h3>E-commerce</h3>
+                            <p>Loja virtual completa com sistema de pagamento</p>
+                            <a href="#" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 5 -->
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="App Financeiro">
+                        <div class="portfolio-overlay">
+                            <h3>App Financeiro</h3>
+                            <p>Aplicativo de gestão financeira pessoal</p>
+                            <a href="#" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 6 -->
+                <div class="portfolio-item" data-category="systems">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="CRM System">
+                        <div class="portfolio-overlay">
+                            <h3>CRM System</h3>
+                            <p>Sistema de gestão de relacionamento com clientes</p>
+                            <a href="#" class="btn">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="logo.png" alt="logo" class="logo-footer">
+                <div class="logo-footerr">Codex Studios</div>
+                <p class="footer-description">Somos uma agência criativa focada em soluções inteligentes. Unimos design, tecnologia e estratégia para impulsionar marcas e entregar resultados reais com inovação e qualidade.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Informações</h3>
+                    <ul>
+                        <li><a href="#">Produção Web</a></li>
+                        <li><a href="#">Produção de Sistemas</a></li>
+                        <li><a href="#">Produção de Apps</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Úteis</h3>
+                    <ul>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="location-icon"></i> Ibirité, Belo Horizonte/MG</li>
+                        <li><i class="phone-icon"></i> +55 31 98516-0321</li>
+                        <li><i class="email-icon"></i> Contato@codexstudios.com.br</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h2>Assine Nossa<br><span class="newsletter-text">NEWSLETTER</span></h2>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="INSIRA SEU EMAIL">
+                    <button type="submit">INSCREVA-SE →</button>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>©2025 Todos os direitos reservados <span class="highlight">CODEX</span> Design & Developed</p>
+        </div>
+    </footer>
+    <a href="https://wa.me/5531985160321" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="images/whatsapp-icon.svg" alt="WhatsApp">
+    </a>
+</body>
+</html> 
